@@ -22,8 +22,10 @@ const removerButton = novasTarefas.querySelector('.remover-button').addEventList
 const feitoButton = novasTarefas.querySelector('.feito-button').addEventListener('click', function(){
     completarTarefas(this);
 })
-//limpar texto
+//limpar texto e manter o foco
 document.querySelector('#tarefas-title').value = "";
+document.querySelector('#tarefas-title').focus()
+
 }
 }
 //funcão remover tarefa
