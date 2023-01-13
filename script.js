@@ -12,7 +12,7 @@ novasTarefas.querySelector('.tarefas-title').textContent = tarefasTitle;
 novasTarefas.classList.remove('template');
 novasTarefas.classList.remove('hide');
 //add tarefa na lista
-const listas = document.querySelector('#tarefas-lista');
+var listas = document.querySelector('#tarefas-lista');
 listas.appendChild(novasTarefas);
 //evento remover
 const removerButton = novasTarefas.querySelector('.remover-button').addEventListener('click', function(){
@@ -40,7 +40,7 @@ function completarTarefas(tarefas){
 
 //Evento que add tarefa
 const addButton = document.querySelector('#add-button');
-addButton.addEventListener('click', function(even){
-    even.preventDefault();
+addButton.addEventListener('click', function(event){
+    event.preventDefault()
     addTarefas()
 })
